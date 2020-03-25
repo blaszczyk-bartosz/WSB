@@ -1,0 +1,116 @@
+body
+{
+    background-color: blueviolet;
+}
+
+#collection
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo
+{
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    float: left;
+
+}
+
+#user
+{   
+    background-color: teal;
+    float: left;
+    width: 600px;
+    height: 100px;
+    
+}
+
+#settings
+{
+    float: left;
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+}
+
+#home
+{
+    clear: both;
+    background-color: forestgreen;
+    width: 100px;
+    height: 49px;
+    float: left;
+}
+
+#menu
+{
+    float: left;
+    background-color: darkgrey;
+    width: 886px;
+    height: 35px;
+    padding: 7px;
+}
+
+#offer
+{
+    clear: both;
+    background-color: crimson;
+    height: 100px;
+}
+
+#history
+{
+    clear: both;
+    background-color: goldenrod;
+    width: 650px;
+    height: 450px;
+    float: left;
+}
+
+#balance
+{
+    float: left;
+    background-color: hotpink;
+    width: 350px;
+    height: 450px;
+}
+
+#foot
+{
+    clear: both;
+    height: 50px;
+    background-color: blue;
+}
+
+.option1
+{
+    font-size: 12px;
+    float: left;
+    padding: 5px;
+    width: 120px;
+    height: 25px;
+    border-right: dotted red 2px;
+}
+
+.option1:hover
+{
+    background-color: red;
+    cursor: pointer;
+}
+ .option2
+ {
+    font-size: 12px;
+    width: 200px;
+    height: 35px;
+    border-bottom: dotted red 2px;
+ }
+
+ .option2:hover
+ {
+     background-color: red ;
+     cursor: pointer;
+ }
+
