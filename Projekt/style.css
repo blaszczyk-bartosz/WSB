@@ -14,7 +14,7 @@ body
    
 }
 
-#id1
+#div1
 {
     padding: 10px;
 }
@@ -55,6 +55,7 @@ body
 
 #home
 {
+    
     clear: both;
     background-color: white;
     width: 100px;
@@ -99,8 +100,12 @@ body
     float: left;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    border-style: outset;
+    border-top: groove 3px seashell;
+    border-right: groove 3px seashell;
+    border-bottom: groove 3px seashell;
+    border-left: groove 3px seashell;
     padding: 10px;
+    
 }
 
 #balance

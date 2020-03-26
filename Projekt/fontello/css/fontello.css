@@ -56,7 +56,7 @@
 }
  
 .icon-mail:before { content: '\e800'; } /* '' */
-.icon-home-outline:before { content: '\e801'; } /* '' */
+.icon-home-outline:before { content: '\e801'; font-size: 40px; } /* '' */
 .icon-cog:before { content: '\e802'; } /* '' */
 .icon-off:before { content: '\e803'; } /* '' */
 .icon-mobile:before { content: '\e804'; } /* '' */
