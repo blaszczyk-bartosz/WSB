@@ -6,6 +6,7 @@ body
 
 #collection
 {
+    
     width: 1200px;
     height: 600px;
     margin-left: auto;
@@ -20,6 +21,7 @@ body
     height: 150px;
     float: left;
     text-align: center;
+    text-size-adjust: 25;
 }
 
 #user
@@ -71,6 +73,8 @@ body
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-align: left;   
+    margin-left: auto;
+    margin-right: auto;
 }
  #image
  {
@@ -91,6 +95,7 @@ body
  #textunderimg
  {
     clear: both;
+    max-width: 1200px;
     font-size: 10px;
     text-align: left;
     height: 50px;
@@ -138,7 +143,6 @@ body
     height: 336px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    margin-top: ;
     border: outset;
 }
 
@@ -157,6 +161,7 @@ body
 {
     text-align: center;
     clear: both;
+    max-width: 1200px;
     height: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -164,15 +169,14 @@ body
 
 .option1
 {
-    font-size: 12px;
+    font-size: 20px;
     float: left;
-    padding: 5px;
-    width: 120px;
-    height: 25px;
-    border-right: dotted white 1px;
+    padding: 0;
+    width: 115px;
+    height: 100px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    float: left;
+    
     
 }
 
@@ -210,7 +214,7 @@ ol
     padding: 0;
     margin: 0;
     list-style-type: none;
-    heigh: 49px;
+    height: 49px;
     line-height: 200%;
     display: inline-block;
 }
@@ -247,7 +251,7 @@ ol > li > ul
     padding: 0;
     margin: 0;
     list-style-type: none;
-    heigh: 49px;
+    height: 49px;
     display: none;
 
 }
