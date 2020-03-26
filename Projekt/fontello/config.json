@@ -41,6 +41,12 @@
       "css": "power",
       "code": 59396,
       "src": "typicons"
+    },
+    {
+      "uid": "c835a3a0692cca9dffde9a8a561da938",
+      "css": "off",
+      "code": 59397,
+      "src": "elusive"
     }
   ]
 }
