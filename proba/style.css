@@ -1,3 +1,14 @@
+@media all and (max-width:1200px) {
+    .collection, .user {
+        float: none;
+      width: 100%;
+    }
+}
+
+    
+
+
+
 body
 {
     background-color: white;
@@ -7,8 +18,7 @@ body
 .collection
 {
     
-    width: 1200px;
-    height: 600px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -17,18 +27,18 @@ body
 #logo
 {
     margin-top: 10px;
-    width: 115px;
+    width: 10%;
     height: 150px;
     float: left;
     text-align: center;
     text-size-adjust: 25;
 }
 
-#user
+.user
 {     
     margin-top: 10px;
     float: left;
-    width: 885px;
+    width: 74%;
     height: 100px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -39,7 +49,7 @@ body
 {
     margin-top: 10px;
     float: left;
-    width: 200px;
+    width: 16%;
     height: 100px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -101,17 +111,19 @@ body
     height: 50px;
  }
 
- #cont
+/* #cont
  {
-    width: 1200;
+     background-color: orchid;
+    max-width: 1200px;
     height: 450px;
     margin-left: auto;
     margin-right: auto;
-}
+}*/
 
 #history
 {
-    width: 566px;
+    min-width: 20px;
+    max-width: 566px;
     height: 426px;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -125,21 +137,23 @@ body
 
 #transactiontxt
 {
+    background-color: orange;
     font-size: 10px;
     height: 360px ;
     margin-left: 10px;
     margin-right: 10px;
-    width: 550px;
+    max-width: 550px;
 }
 
 #balance
 {
+    background-color: rosybrown;
     float: left;
     margin-right: 128px;
     margin-left: 128px;
     margin-top: 53px;
     margin-bottom: 53px;
-    width: 336px;
+    max-width: 336px;
     height: 336px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -150,6 +164,7 @@ body
 {
     text-align: right;
     float: right;
+    background-color: peru;
 }
 
 #nrkonta

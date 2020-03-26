@@ -1,0 +1,16 @@
+
+@media all (max-widht:1100px) {
+    #menu{
+        margin:auto;}
+}
+
+
+#menu
+{
+    float: left;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    max-width:1100px;
+    height: 49px;
+}

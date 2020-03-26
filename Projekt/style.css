@@ -111,6 +111,7 @@ body
 
 #history
 {
+
     width: 566px;
     height: 426px;
     margin-top: 8px;
@@ -266,4 +267,17 @@ ol > li > ul > li
 ol > li > ul > li:hover
 {
     background-color: silver;
+}
+
+.odbiorca
+{
+    margin-left: 10px;
+}
+
+.kwota
+
+{
+    text-align: right;
+    float:right;
+    padding-right: 150px;
 }
