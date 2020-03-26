@@ -1,3 +1,12 @@
+@media all and (max-width: 1200px) {
+    .collection, #cont { width: auto; margin: auto; }
+    #story {width: auto; margin: auto;}
+    #menu {width: auto; margin: auto;}
+    #image{margin-top: 40px; text-align: center; width: 100%;}
+    #txtnexttoimg{text-align: center; width: 100%; margin-left: 20px;}
+    
+}
+
 body
 {
     background-color: white;
@@ -7,7 +16,7 @@ body
 .collection
 {
     
-    width: 1200px;
+    max-width: 1200px;
     height: 600px;
     margin-left: auto;
     margin-right: auto; 
@@ -17,7 +26,7 @@ body
 #logo
 {
     margin-top: 10px;
-    width: 115px;
+    width: 10%;
     height: 150px;
     float: left;
     text-align: center;
@@ -28,7 +37,7 @@ body
 {     
     margin-top: 10px;
     float: left;
-    width: 885px;
+    width: 74%;
     height: 100px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -39,7 +48,7 @@ body
 {
     margin-top: 10px;
     float: left;
-    width: 200px;
+    width: 16%;
     height: 100px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -49,7 +58,7 @@ body
 #home
 {
     clear: both;
-    width: 100px;
+    width: 8%;
     height: 49px;
     float: left;
     font-family: 'Montserrat', sans-serif;
@@ -62,12 +71,14 @@ body
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    width:1100px;
+    width:92%;
     height: 49px;
 }
 
 #offer
 {
+    max-width: 1200;
+    margin-top: 20px;
     clear: both;
     height: 250px;
     font-family: 'Montserrat', sans-serif;
@@ -103,16 +114,18 @@ body
 
  #cont
  {
-    width: 1200;
+    max-width: 1200;
     height: 450px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
 }
 
 #history
 {
 
-    width: 566px;
+    width: 45%;
     height: 426px;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -130,17 +143,17 @@ body
     height: 360px ;
     margin-left: 10px;
     margin-right: 10px;
-    width: 550px;
+    max-width: 550px;
 }
 
 #balance
 {
     float: left;
-    margin-right: 128px;
-    margin-left: 128px;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-top: 53px;
     margin-bottom: 53px;
-    width: 336px;
+    width: 45%;
     height: 336px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -272,10 +285,10 @@ ol > li > ul > li:hover
 .odbiorca
 {
     margin-left: 10px;
+    text-align: left;
 }
 
 .kwota
-
 {
     text-align: right;
     float:right;
