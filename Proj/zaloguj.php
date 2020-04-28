@@ -24,26 +24,75 @@
             
             $log= htmlentities($log, ENT_QUOTES,"UTF-8");       //zencjuj znaki przypisane do (zmiennej log, uwzględniając apostrof i cudzysłów, w UTF-8)
             $pass= htmlentities($pass, ENT_QUOTES,"UTF-8");     //zencjuj znaki przypisane do (zmiennej pass, uwzględniając apostrof i cudzysłów, w UTF-8)
-        
+            
+            $_SESSION['lo'] = $log;
 
             if ($rezultat = $polaczenie->query(                             
-                sprintf("SELECT * FROM klient WHERE NumerID='%s' AND Haslo='%s'",  //wykonaj zapytanie SQL dla wartości wpisanych przez użytkownika
+                sprintf("SELECT k.NumerID, k.Imie, k.Nazwisko, z.Saldo, z.NrKonta AS znr, o.NrKonta AS onr
+                FROM klient AS k, kzero AS z, koszcz AS o
+                WHERE z.NumerID = k.NumerID AND o.NumerID = k.NumerID
+                AND k.NumerID='%s' AND k.Haslo='%s'",  //wykonaj zapytanie SQL dla wartości wpisanych przez użytkownika
                 mysqli_real_escape_string($polaczenie,$log),                //uprzednio uniemożliwiając naruszenia zapytania(mysqli_real_escape_string)
                 mysqli_real_escape_string($polaczenie,$pass))))         
                 {
                     $ilu = $rezultat->num_rows;                             //wynik zapytania, zmienną rezultat(cały wiersz->num_rows) przypisz do zmiennej ili
-
+                    
                     if($ilu>0)                  //jeżeli zmienna ilu zwraca jeden wiersz(więcej nie może, bo jest tylko jeden taki użytkownik) to
                     {
+                        
                         $_SESSION['zalogowany'] = true;                     //do zmienneh globalnej zalogowany przypisz wartość true(oznacza, że wykonują się polecenia zalogowania)
                         $wiersz = $rezultat->fetch_assoc();                 //do zmiennej wiersz przypisz wynik zapytania tworząc tablicę asocjacyjną(zamieniającą indeksy[0,1,2 itp] na wartości nazw kolumn)
                         $_SESSION['numer'] = $wiersz['NumerID'];                 //indeks(zmienną) z tablicy asocjacyjnej zapytania przypisz do zmiennej globalnej
                         $_SESSION['imie'] = $wiersz['Imie'];                //indeks(zmienną) z tablicy asocjacyjnej zapytania przypisz do zmiennej globalnej
                         $_SESSION['nazwisko'] = $wiersz['Nazwisko'];        //indeks(zmienną) z tablicy asocjacyjnej zapytania przypisz do zmiennej globalnej
-                        
+                        $_SESSION['saldo'] = $wiersz['Saldo']; 
+                        $_SESSION['znrkonta'] = $wiersz['znr']; 
+                        $_SESSION['onrkonta'] = $wiersz['onr'];
+
                         unset($_SESSION['blad']);                   //jeżeli jesteśmy zalogowani usuń zmienną przechowującą informację o błędnych danych
                         $rezultat->close();                         //zamknij wynik zapytania
-                        header('location: start.php');              //wszystkie zmienne przenieś i wykonaj w skrypcie następnym
+                        
+                        
+            if($wynik = $polaczenie->query(
+                sprintf("SELECT * FROM dane AS d, klient AS k 
+                WHERE k.NumerID=d.NumerID AND k.NumerID='%s' AND k.Haslo='%s'", 
+                mysqli_real_escape_string($polaczenie,$log),                
+                mysqli_real_escape_string($polaczenie,$pass))))
+                {
+                    $ile = $wynik->num_rows;
+                    if($ile>0)
+                    $wyn = $wynik->fetch_assoc();
+                    $_SESSION['dPesel'] = $wyn['PESEL'];
+                    $_SESSION['dUlica'] = $wyn['Ulica'];
+                    $_SESSION['dkod'] = $wyn['KodPocztowy'];
+                    $_SESSION['dmiejscowosc'] = $wyn['Miejscowosc'];
+                    $_SESSION['dkraj'] = $wyn['Kraj'];
+                    $_SESSION['dmail'] = $wyn['Email'];
+                    $_SESSION['dtel'] = $wyn['Telefon'];
+                    $wynik->close();
+                }
+        
+
+            if($dowod = $polaczenie->query(
+                sprintf("SELECT d.DataWaznosci, d.NumerDowodu, a.Ulica, a.KodPocztowy, a.Miejscowosc, a.Kraj 
+                FROM dowod AS d, klient AS k, adreskor AS a 
+                WHERE k.NumerID=d.NumerID AND k.NumerID=a.NumerID AND k.NumerID='%s' AND k.Haslo='%s'", 
+                mysqli_real_escape_string($polaczenie,$log),                
+                mysqli_real_escape_string($polaczenie,$pass))))
+                {
+                    $id = $dowod->num_rows;
+                    if($id>0)
+                    $dow = $dowod->fetch_assoc();
+                    $_SESSION['dataw'] = $dow['DataWaznosci'];
+                    $_SESSION['numerd'] = $dow['NumerDowodu'];
+                    $_SESSION['kulica'] = $dow['Ulica'];
+                    $_SESSION['kkod'] = $dow['KodPocztowy'];
+                    $_SESSION['kmiejs'] = $dow['Miejscowosc'];
+                    $_SESSION['kkraj'] = $dow['Kraj'];
+                    $dowod->close();
+                }
+
+                    header('location: start.php');              //wszystkie zmienne przenieś i wykonaj w skrypcie następnym
                     }
                     else
                     {
@@ -52,6 +101,8 @@
                     }
                 }
             }
+
+
         
             $polaczenie->close(); //po wykonaniu wszystkiego zamknij połączenie z bazą
         

@@ -1,0 +1,23 @@
+<!-- atrybut defer powoduje że strona może być ładowana bez oczekiwania na zkończenie skrytpu -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- powyżej określenie typu dokumentu jako HTML 4.01 Strict -->
+<html xmlns="http://www.w3.org/1999/xhtml"> <!-- początek dokumentu html -->
+<head> <!-- początek sekcji nagłówka -->
+		<!-- poniżej określenie kodowania znaków na utf8 -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<!-- Poniżej ustawienie tytułu strony: wyświetlane w górnym pasku przegądarki -->
+		<title>Owoce i Warzywa - oto tytuł strony</title> 
+        <!-- Ustawienie słów kluczowych, może być wykorzystywane przez katalogi stron czy wyszukiwarki internetowe -->
+    <meta name="Keywords" content="owoce, warzywa, pomidory, gruszki, kapusta, sałata, seler, por, jabłka, wiśnie, czereśnie, truskawki" />
+    	<!-- opis strony - może być wykorzystywane przez katalogi stron czy wyszukiwarki internetowe -->
+    <meta name="Description" content="Strona zawiera mnóstwo informacji na temat owoców i warzyw popularnych w Polsce." />
+    <meta name="author" content="Jan Kowalski - jan@kowalski.pl" />     	<!-- autor strony -->    
+	<!-- określenie jaki jest kolejny dokument w witrynie (o ile autor zakłada że witrynę należy przeglądać w odpowiedniej kolejności). Nie wpływa to na wygląd witryny, ale może pomóc wyszukiwarkom, czy przeglądarkom które mogą zacząć ściągać kolejną podstronę zanim użytkownik kliknie na link (link musi być osobno zdefiniowany na stronie - deklaracja poniżej nic nie wyświetla). rel określa relację do dokumentu określonego przez href z punktu widzenia bieżącego dokumentu, rev określa relację z punktu widzenia dokumentu określonego przez href -->	    
+	<link href="folder1/podfolder/041.html" rel="next" rev="prev" />
+	<!-- atrybut defer powoduje że strona może być ładowana bez oczekiwania na zkończenie skrytpu -->	
+	<script src="JS.js" type="text/javascript" defer="defer"></script> 
+</head> <!-- koniec sekcji nagłówka -->
+<body>	<!-- początek treści strony -->
+	  <p id="akapit">Pusta strona www</p>
+</body>
+</html>

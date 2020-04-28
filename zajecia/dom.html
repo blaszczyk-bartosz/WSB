@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- powyżej określenie typu dokumentu jako HTML 4.01 Strict -->
+<html xmlns="http://www.w3.org/1999/xhtml"> <!-- początek dokumentu html -->
+<head> <!-- początek sekcji nagłówka -->
+		<!-- poniżej określenie kodowania znaków na utf8 -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<!-- Poniżej ustawienie tytułu strony: wyświetlane w górnym pasku przegądarki -->
+		<title>Owoce i Warzywa - oto tytuł strony</title> 
+        <!-- Ustawienie słów kluczowych, może być wykorzystywane przez katalogi stron czy wyszukiwarki internetowe -->
+    <meta name="Keywords" content="owoce, warzywa, pomidory, gruszki, kapusta, sałata, seler, por, jabłka, wiśnie, czereśnie, truskawki" />
+    	<!-- opis strony - może być wykorzystywane przez katalogi stron czy wyszukiwarki internetowe -->
+    <meta name="Description" content="Strona zawiera mnóstwo informacji na temat owoców i warzyw popularnych w Polsce." />
+    <meta name="author" content="Jan Kowalski - jan@kowalski.pl" />     	<!-- autor strony -->    
+	<!-- określenie jaki jest kolejny dokument w witrynie (o ile autor zakłada że witrynę należy przeglądać w odpowiedniej kolejności). Nie wpływa to na wygląd witryny, ale może pomóc wyszukiwarkom, czy przeglądarkom które mogą zacząć ściągać kolejną podstronę zanim użytkownik kliknie na link (link musi być osobno zdefiniowany na stronie - deklaracja poniżej nic nie wyświetla). rel określa relację do dokumentu określonego przez href z punktu widzenia bieżącego dokumentu, rev określa relację z punktu widzenia dokumentu określonego przez href -->    
+	<link href="folder1/podfolder/041.html" rel="next" rev="prev" />
+	<!-- atrybut defer powoduje że strona może być ładowana bez oczekiwania na zkończenie skrytpu -->	
+	<script src="DOM.js" type="text/javascript" defer="defer"></script> 
+</head> <!-- koniec sekcji nagłówka -->
+<body>	<!-- początek treści strony -->
+<!-- przypisanie do zdarzenia onsubmit (wysłanie formularza) wyrażenia return false (zwraca fałsz)
+	Jeśli zdarzenie onsubmit użyte dla elementu form zwraca fałsz, formularz NIE zostanie wysłany
+	Dzięki temu formularz poniżej nigdy nie zostanie wysłany
+	 -->
+	<form action="skrypt.php" onsubmit="return false">
+	<div>
+		<label for="pole1">Pole 1:</label>	<!-- opis pola -->
+		<input type="text" name="pole1" id="pole1" value="#AABB99" />	<!-- pole do wprowadzania danych, domyślna wartość w atrybucie value -->
+		<br />	<!-- wymusza przejście do następnej linii -->
+		<label for="pole2">Pole 2:</label>
+		<input type="text" name="pole2" id="pole2" value="#0011CC" />
+		<br />
+		<label for="pole3">Pole 3:</label>
+		<textarea id="pole3" name="pole3" rows="4" cols="60">domyślna wartość</textarea>	<!-- pole tekstowe o zadanej liczbie wierszy (atrybut rows) i kolumn (atrybut cols) -->
+		<br />
+		<!-- przyciski wysyłające formularz (ten formularz nigdy nie zostanie wysłany - 
+			spójrz na definicję elementu form -->		
+		<input type="submit" value="Przepisz" />
+		<input type="submit" value="Ustaw kolory" />
+		<input type="submit" value="Nowy akapit" />
+	</div>		
+	</form>
+		<!-- utworzenie kilku akapitów tekstu i przypisanie im identyfikatorów -->
+	  <p id="akapit1">To jest pierwszy akapit tekstu. To jest pierwszy akapit tekstu. To jest pierwszy akapit tekstu.
+	  	To jest pierwszy akapit tekstu. To jest pierwszy akapit tekstu. To jest pierwszy akapit tekstu.  
+	  </p>
+	  <p id="akapit2">To jest drugi akapit tekstu. To jest drugi akapit tekstu. To jest drugi akapit tekstu.
+	  	To jest drugi akapit tekstu. To jest drugi akapit tekstu. To jest drugi akapit tekstu.  
+	  </p>
+	  <p id="akapit3">To jest trzeci <span>akapit tekstu</span>. To jest trzeci akapit tekstu. To jest trzeci akapit tekstu. 
+	  	To jest trzeci akapit tekstu. To jest trzeci akapit tekstu. To jest trzeci akapit tekstu. 
+	  </p>
+	  <!-- definicja nagłówków h1 i h4 -->
+	  <h1 >A</h1>
+	  <h4 >A</h4>
+</body>
+</html>

@@ -21,6 +21,7 @@ if (!isset($_SESSION['zalogowany']))    //instrukcja utrzymania zalogowania(jeż
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href ="style.css" type="text/css"/>
+    <link rel="stylesheet" href ="przel.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Baloo+2|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css"/>
 </head>
@@ -108,33 +109,75 @@ if (!isset($_SESSION['zalogowany']))    //instrukcja utrzymania zalogowania(jeż
 
 
     <main>
-    <div class="row mt-3 ">
-        <div class="col-lg-4 offset-1 balance my-auto col-sm-12 mx-auto ">
-            <h1>Safe Konto</h1>
-            <h2>Konto Za Zero</h2>
-            <h3><span class="count"> <?php echo $_SESSION['znrkonta']; ?> </span></h3>    
-            <h4><span class="number">Dostępne środki:</span> <?php echo $_SESSION['saldo']; ?> </h4>
-            <h3><span class="count">Inne konta:</span></h3> 
-            <h6>Konto Oszczędnościowe <p> <?php echo $_SESSION['onrkonta']; ?> </p></h6>
+        <div class='row justify-content-center'>
+            <div class='col-lg-3 col-sm-6 wybor1'> <h2 class='srodek'>KRAJOWY</h2></div>
+            <div class='col-lg-3 col-sm-6 wybor2'> <h2 class='srodek'>WŁASNY</h2></div>
         </div>
 
-        <div class="col-lg-5 offset-1 story col-sm-12 mx-auto mt-3 story">
-            <h1>Historia Transakcji</h1>
-                25.03.2020
-                    <br/>
-                <span><i class="icon-mobile ikona"></i> </span> <span class="odbiorca">Netflix</span> <span class="kwota">-50</span>
-                    <hr><hr>
-                22.03.2020
-                    <br/>
-                <span><i class="icon-mobile ikona"></i> </span> <span class="odbiorca">PSC SP.Z.O.O</span> <span class="kwota">-100,21</span>
-                    <hr><hr>
-                19.03.2020
-                    <br>
-                <span><i class="icon-mobile ikona"></i> </span> <span class="odbiorca">KFC POLSKA</span> <span class="kwota">-49,21</span>
-                    <hr><hr>
+        <div class='row justify-content-center'>
+            <div class='col-3 d1'> <p class='middle'>Z Konta</p></div>
+            <div class='col-7 d'></div>
         </div>
-    </div>
+
+        <div class='row justify-content-center'>
+            <div class='col-3 d1'><p class='middle'>Odbiorca</p></div>
+            <div class='col-7 d'>
+                <div class='col-10 d2'>ssssssssssssssssssssssssssssssssssss</div>
+                <div class='col-1 d4'>ssss</div>
+                <div class='cl'></div>
+            </div>
+            
+        </div>
+
+        <div class='row justify-content-center'>
+            <div class='col-3 d1'><p class='middle'>Numer Konta</p></div>
+            <div class='col-7 d'></div>
+        </div>
+
+        <div class='row justify-content-center'>
+            <div class='col-3 d1'><p class='middle'>Tytuł</p></div>
+            <div class='col-7 d'><input class='wpis' type='text' placeholder='Tytuł'></div>
+        </div>
+
+        <div class='row justify-content-center'>
+            <div class='col-3 d1'><p class='middle'>Kwota</p></div>
+            <div class='col-7 d'>
+                <div class='col-3 pln'></div>
+            </div>
+        </div>
+
+        <div class='row justify-content-center'>
+            <div class='col-3 d1'><p class='middle'>Data Przelewu</p></div>
+            <div class='col-7 d'>
+                <div class='col-5 data'></div>
+            </div>
+        </div>
+
+
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <aside>
     <div class="row mt-4">

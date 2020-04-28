@@ -17,6 +17,7 @@
     <meta name="keywords" content="dobry bank, szybki bank, nowoczesny bank, nowoczesna bankowo��"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>SafeBank - nowoczesna bankowość</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="form.css" type="text/css"/>
 </head>
 <body>

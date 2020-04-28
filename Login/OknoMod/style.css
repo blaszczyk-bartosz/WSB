@@ -1,0 +1,16 @@
+.okno
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+}
+
+.dp
+{
+    float: left;
+}
+
+.cl
+{
+    clear: both;
+}

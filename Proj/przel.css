@@ -1,0 +1,111 @@
+.wybor1
+{
+
+    height: 100px;
+    margin-top: 12px;
+    margin-right: 20px;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(214,206,214,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(214,206,214,1);
+    box-shadow: 0px 0px 5px 3px rgba(214,206,214,1);
+    border-radius: 8px;
+    background-color: #EFFFFF;
+    display: table;
+
+}
+
+.wybor1:hover
+{
+    background-color: #CFFFFF;
+    cursor: pointer;
+}
+
+.wybor2
+{
+    height: 100px;
+    margin-top: 12px;
+    margin-left: 20px;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(214,206,214,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(214,206,214,1);
+    box-shadow: 0px 0px 5px 3px rgba(214,206,214,1);
+    border-radius: 8px;
+    background-color: #EFFFFF;
+    display: table;
+}
+
+.wybor2:hover
+{
+    background-color: #CFFFFF;
+    cursor: pointer;
+}
+
+.srodek
+{   
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.d
+{
+background-color: blue;
+height: 50px;
+margin: 15px;
+padding-left:0 ;
+}
+
+.d4
+{
+    background-color: brown;
+    float: left;
+    height: 50px;
+    text-align: right;
+    margin-left: 50px;
+}
+
+.d2
+{
+    background-color: yellow;
+    float: left;
+    height: 50px;
+
+}
+
+.cl
+{
+    clear: both;
+}
+
+.pln
+{
+    background-color: violet;
+    height: 50px;
+}
+
+.data
+{
+    background-color: yellowgreen;
+    height: 50px;
+}
+
+.d1
+{
+    display: table;
+    height: 50px;
+    margin: 15px;
+    padding-right: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.middle
+{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.wpis
+{
+    height: 50px;
+    width: 665px;
+}
